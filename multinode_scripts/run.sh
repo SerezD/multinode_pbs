@@ -1,0 +1,4 @@
+#!/bin/bash
+
+NODE_RANK=$OMPI_COMM_WORLD_RANK ${EXEC} ${SCRIPT}
+
