@@ -14,11 +14,10 @@ WORK_DIR="/home/dserez/"
 
 # path to python excecutable (inside conda env)
 ENV_NAME=base
-EXEC="${WORK_DIR}miniconda3/envs/${ENV_NAME}/bin/python"
 
 # python script to launch (no args are added here, but you can add them if needed)
 SCRIPT="${WORK_DIR}my_test.py"
 
-qsub -l $COMM -l walltime=$TIME -j oe -N "Test" -q $QUEUE -v EXEC=$EXEC,SCRIPT="$SCRIPT",WORK_DIR=$WORK_DIR ./multinode_scripts/multinode.sh
+qsub -l $COMM -l walltime=$TIME -j oe -N "Test" -q $QUEUE -v ENV_NAME=$ENV_NAME,SCRIPT="$SCRIPT",WORK_DIR=$WORK_DIR ./multinode_scripts/multinode.sh
 
 
