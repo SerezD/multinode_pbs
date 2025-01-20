@@ -1,0 +1,11 @@
+name: pytorch_base
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda==12.1  # adjust as needed
+  - numpy
