@@ -2,14 +2,12 @@
 
 ### Initial Setup
 
-Install miniconda and (optional but suggested) set libmamba solver.
+Install miniforge:
 
-- [https://docs.anaconda.com/miniconda/install/](https://docs.anaconda.com/miniconda/install/)
-- [https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community)
+- [https://conda-forge.org/download/](https://conda-forge.org/download/)
 
 Scripts for automatic installation and set up:   
-`./initial_setup/install_miniconda.sh -d <installation_directory>`  
-`./initial_setup/libmamba_solver.sh`  
+`./initial_setup/install_miniforge.sh -d <installation_directory>`  
 
 If not already installed on the cluster, you can install useful things like `TMUX`, `GIT` and `HTOP` directly in 
 `conda base`:
@@ -20,7 +18,7 @@ If not already installed on the cluster, you can install useful things like `TMU
 
 To conclude the setup, install your conda environment with pytorch and cuda support: 
 
-`conda env install -f environment.yml`  
+`conda env create -f environment.yml`  
 
 _Note: adjust cuda version as needed_
 

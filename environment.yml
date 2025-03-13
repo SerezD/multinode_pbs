@@ -1,11 +1,12 @@
 name: pytorch_base
 channels:
-  - pytorch
-  - nvidia
   - conda-forge
 dependencies:
   - pytorch
+  # make sure that pytorch with CUDA support is installed
+  - pytorch-gpu
   - torchvision
   - torchaudio
-  - pytorch-cuda==12.1  # adjust as needed
+  # If you have a required CUDA version, uncomment and specify the version
+  # - cuda-version=12.6
   - numpy

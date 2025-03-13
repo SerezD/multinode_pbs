@@ -4,7 +4,7 @@
 
 usage() {
     echo "Usage: $0 [-d <installation_directory>] [-h]"
-    echo "  -d <installation_directory>  Specify the base directory for Miniconda installation (default: ~/)."
+    echo "  -d <installation_directory>  Specify the base directory for Miniforge installation (default: ~/)."
     echo "  -h                           Display this help message."
 }
 
@@ -34,9 +34,9 @@ while getopts ":d:h" opt; do
     esac
 done
 
-mkdir -p ${BASE_DIR}/miniconda3
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ${BASE_DIR}/miniconda3/miniconda.sh
-bash ${BASE_DIR}/miniconda3/miniconda.sh -b -u -p ${BASE_DIR}/miniconda3
-rm -rf ${BASE_DIR}/miniconda3/miniconda.sh
-${BASE_DIR}/miniconda3/bin/conda init bash
-${BASE_DIR}/miniconda3/bin/conda init zsh
+mkdir -p ${BASE_DIR}/miniforge3
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O ${BASE_DIR}/miniforge3/miniforge.sh
+bash ${BASE_DIR}/miniforge3/miniforge.sh -b -u -p ${BASE_DIR}/miniforge3
+rm -rf ${BASE_DIR}/miniforge3/miniforge.sh
+${BASE_DIR}/miniforge3/bin/conda init bash
+${BASE_DIR}/miniforge3/bin/conda init zsh
