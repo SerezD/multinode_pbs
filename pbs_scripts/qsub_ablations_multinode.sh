@@ -1,8 +1,7 @@
 #!/bin/bash
 
 CHUNKS=2
-COMM="select=${CHUNKS}:ngpus=2:ncpus=4" # -> torchrun
-# COMM="select=${CHUNKS}:ngpus=2:ncpus=4:mpiprocs=2"  # -> mpirun
+COMM="select=${CHUNKS}:ngpus=2:ncpus=4:mpiprocs=2"
 QUEUE=gpu
 TIME="04:00:00"
 
